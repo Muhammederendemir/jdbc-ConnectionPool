@@ -59,3 +59,23 @@
 2019-04-21 22:47:59 INFO  CountryDAO:86 - Veritabanından veri çekilmiştir
 2019-04-21 22:48:02 INFO  CountryDAO:110 - Veritabanına kayıt yapılmıştır
 2019-04-21 22:48:02 INFO  CountryDAO:86 - Veritabanından veri çekilmiştir
+2019-04-29 09:26:51 ERROR CountryDAO:141 - execute functionunda hata meydana geldi  HATA :com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+2019-04-29 09:26:51 INFO  CountryDAO:110 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:27:07 INFO  CountryDAO:110 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:34:54 INFO  CountryDAO:111 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:35:46 ERROR CountryDAO:144 - execute functionunda hata meydana geldi  HATA :com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+2019-04-29 09:35:46 INFO  CountryDAO:111 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:35:46 INFO  CountryDAO:87 - Veritabanından veri çekilmiştir
+2019-04-29 09:36:52 ERROR CountryDAO:144 - execute functionunda hata meydana geldi  HATA :com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+2019-04-29 09:36:52 INFO  CountryDAO:111 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:36:52 INFO  CountryDAO:87 - Veritabanından veri çekilmiştir
+2019-04-29 09:37:27 INFO  CountryDAO:111 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:37:27 INFO  CountryDAO:87 - Veritabanından veri çekilmiştir
+2019-04-29 09:37:27 INFO  CountryDAO:87 - Veritabanından veri çekilmiştir
+2019-04-29 09:37:46 ERROR CountryDAO:144 - execute functionunda hata meydana geldi  HATA :com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+2019-04-29 09:37:46 INFO  CountryDAO:111 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:37:46 INFO  CountryDAO:87 - Veritabanından veri çekilmiştir
+2019-04-29 09:41:35 INFO  CountryDAO:83 - Veritabanından veri çekilmiştir
+2019-04-29 09:41:56 INFO  CountryDAO:83 - Veritabanından veri çekilmiştir
+2019-04-29 09:42:35 INFO  CountryDAO:107 - Veritabanına kayıt yapılmıştır
+2019-04-29 09:42:35 INFO  CountryDAO:83 - Veritabanından veri çekilmiştir

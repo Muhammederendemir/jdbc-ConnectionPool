@@ -6,7 +6,7 @@ public class Test
 {
     public static void main(String[] args) {
         //System.out.println("dfg");
-        Country country=new Country(2,"Fraansa","Fransızca");
+        Country country=new Country(4,"Azerbaycan","Türkçe");
        // System.out.println("wsdfsg");
         CountryDAOImpl countryDAO=new CountryDAOImpl();
         countryDAO.saveCountry(country);

@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Properties;
@@ -22,7 +23,7 @@ public class CountryDAOImpl implements CountryDAO {
     private final String SAVE_COUNTRY="INSERT INTO country(countryNo,countryName,countryLanguage) VALUES(?,?,?)";
     private final String UPDATE_COUNTRY="UPDATE country SET countryName=?,countryLanguage=? WHERE countryNo=? ";
     private final String DELETE_COUNTRY="  DELETE FROM country WHERE countryNo=?";
-    private DataSource dataSource;
+    private static DataSource dataSource;
     public CountryDAOImpl() {
         dataSource=setConnection();
     }
@@ -31,8 +32,6 @@ public class CountryDAOImpl implements CountryDAO {
         if(dataSource == null)
         {
             HikariConfig config = new HikariConfig();
-            //config.setDriverClassName("");
-
             Properties prop = new Properties();
             InputStream input = null;
             try {
@@ -41,7 +40,6 @@ public class CountryDAOImpl implements CountryDAO {
             } catch (IOException io) {
                 logger.warn("input oluşturmada hata meydana geldi  HATA : "+io);
             }
-
             String jdbcUrl = prop.getProperty("jdbc.url");
             String jdbcUsername = prop.getProperty("jdbc.username");
             String jdbcPassword = prop.getProperty("jdbc.password");
@@ -54,7 +52,6 @@ public class CountryDAOImpl implements CountryDAO {
             properties.setProperty("serverTimezone", "UTC");
             properties.setProperty("autoReconnect", "true");
             properties.setProperty("useSSL", "false");
-
 
             config.setJdbcUrl(jdbcUrl);
             config.setUsername(jdbcUsername);
@@ -125,7 +122,8 @@ public Country getCountryId(int countryNo) {
 
     private void execute(String sql, Object... queryParameters){
         try {
-            Connection connection=dataSource.getConnection();
+          //Connection connection=dataSource.getConnection();
+           Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javaexample","root", "");//DB bağlantısı kuruyorum
             PreparedStatement ps=connection.prepareStatement(sql);
             int index=1;
             if(queryParameters!=null){

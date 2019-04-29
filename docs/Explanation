@@ -1,0 +1,21 @@
+
+
+                                    ===   Connection pool  ====
+
+       Bağlantı havuzu, dinamik veritabanı tabanlı içerikli uygulamalarda performansı artırmak için kullanılan bir tekniktir.
+       Veritabanı bağlantılarını açmak ve kapatmak pahalı bir masraf gibi görünmeyebilir, ancak oldukça hızlı bir şekilde
+       toplanabilir. Bir bağlantı kurmanın 5ms, sorgunuzu yürütmek için 5ms'nin (tamamen yapılmış sayılar) sürdüğünü varsayalım,
+       zamanın% 50'si bağlantıyı kurar. Bunu binlerce veya on binlerce isteme kadar uzatın ve çok fazla boşa harcanan zaman var.
+       Bağlantı havuzları aslında açık veritabanı bağlantılarının bir önbelleğidir. Açtıktan sonra bir veritabanı bağlantısını
+       açıp kullandıktan sonra tekrar havuza ekleyin. Yeni bir bağlantı almaya başladığınızda, havuzda bir bağlantı varsa,
+       başka bir bağlantı kurmak yerine bu bağlantıyı kullanır.
+
+                                 ----->  Neden Bağlantı Havuzu Kullanmalı?  <----
+
+       * Sürekli açılan ve kapanan bağlantılar pahalı olabilir. Önbellek ve yeniden.
+
+       * Etkinlik arttığında, veritabanına bağlantı sayısını sınırlayabilirsiniz. Bu, bir bağlantı mevcut olana kadar kodu
+        engellemeye zorlar. Bu özellikle dağınık ortamlarda yardımcı olur.
+
+       * Ortak işlemleri birden fazla havuza ayırın. Örneğin, her biri farklı yapılandırmalara sahip OLAP bağlantıları için
+       belirlenmiş bir havuz ve OLTP bağlantıları için bir havuzunuz olabilir.
